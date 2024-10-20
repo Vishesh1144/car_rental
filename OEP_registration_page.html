@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up Page</title>
+    <link rel="stylesheet" href="OEP_css.css">
+</head>
+
+<body>
+    <div class="form-container registration-form">
+        <h2>Let's get started.</h2>
+        <!-- The form method is now POST and points to a PHP file where the data is handled -->
+        <form action="Reg.php" method="POST">
+
+            <div class="form-group">
+                <input type="text" name="firstname" placeholder="First Name" required>
+                <input type="text" name="lastname" placeholder="Last Name" required>
+            </div>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <textarea name="address" placeholder="Address" rows="3" required></textarea>
+            <input type="text" name="pincode" placeholder="Pincode" maxlength="6" minlength="6">
+            <div class="form-group">
+                <!-- State Dropdown -->
+                <select id="state" name="st" required>
+                    <option value="" disabled selected>Select State</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chhattisgarh">Chhattisgarh</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="HimachalPradesh">Himachal Pradesh</option>
+                    <option value="Jharkhand">Jharkhand</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="MadhyaPradesh">Madhya Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Manipur">Manipur</option>
+                    <option value="Meghalaya">Meghalaya</option>
+                    <option value="Mizoram">Mizoram</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="Odisha">Odisha</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Sikkim">Sikkim</option>
+                    <option value="TamilNadu">Tamil Nadu</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="Tripura">Tripura</option>
+                    <option value="UttarPradesh">Uttar Pradesh</option>
+                    <option value="Uttarakhand">Uttarakhand</option>
+                    <option value="WestBengal">West Bengal</option>
+                </select>
+                
+
+                <!-- City Dropdown (Populated based on state selection) -->
+                <select id="city" name="ct" required>
+                    <option value="" disabled selected>Select City</option>
+                </select>
+            </div>
+            <input type="text" name="contact" placeholder="Contact Number" required>
+            <div class="checkbox-group">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">
+                    I accept the <a href="#">Privacy Policy</a>, 
+                    <a href="#">Software Services Agreement</a>, 
+                    and <a href="#">Acceptable Use Policy</a>.
+                </label>
+            </div>
+            <button type="submit">Create account</button>
+        </form>
+    </div>
+    <script src="OEP_script.js"></script>
+</body>
+
+</html>
