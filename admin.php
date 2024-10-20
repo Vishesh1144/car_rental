@@ -11,7 +11,10 @@
             padding: 0;
             display: flex;
             height: 100vh;
-            background-color: #f2f2f2;
+            background-image: url('./images/card.jpg');
+            background-size: cover; 
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
         /* Sidebar styling */
@@ -21,6 +24,10 @@
             color: white;
             padding: 20px;
             box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+            background-image: url('./images/card.jpg');
+            background-size: cover; 
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
         .sidebar h2 {
@@ -47,6 +54,10 @@
             padding: 20px;
             background-color: white;
             overflow-y: auto;
+            background-image: url('./images/card.jpg');
+            background-size: cover; 
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
         /* Logout button */

@@ -49,148 +49,154 @@ $conn->close();
     <title>Rent a Vehicle Today!</title>
     <link rel="icon" type="image/png" href="./images/favicon.png">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            background-image: url('./images/BGimage.png');
-            background-size: cover; 
-            background-position: center;
-            background-repeat: no-repeat; 
-        }
-        html, body {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-        :root {
-            --navbar-height: 59px;
-        }
-        #navbar {
-            display: flex;
-            align-items: center;
-            position: sticky;
-            top: 0px;
-            background-color: #ef8a42;
-            padding: 10px;
-            z-index: 1;
-        }
-        #logo {
-            margin: 10px 34px;
-        }
-        #logo img {
-            height: 40px;
-            width: auto;
-            margin: 0;
-        }
-        .nav-links {
-            display: flex;
-            font-family: 'Baloo Bhai', cursive;
-            list-style: none;
-        }
-        .nav-links li {
-            font-size: 1.3rem;
-            margin-right: 15px;
-        }
-        .nav-links li a {
-            color: white;
-            display: block;
-            padding: 3px 22px;
-            border-radius: 20px;
-            text-decoration: none;
-        }
-        .nav-links li a:hover {
-            color: black;
-            background-color: white;
-        }
-        .account-icon {
-            margin-left: auto;
-            display: flex;
-            align-items: center;
-        }
-        .account-icon img {
-            height: 40px;
-            margin-right: 10px;
-        }
-        .account-icon a {
-            color: white;
-            margin-left: 10px;
-            text-decoration: none;
-        }
-        .account-icon a:hover {
-            color: black;
-            text-decoration: underline;
-        }
-        .form-container {
-            background-color: white;
-            margin-left: 35%;
-            margin-top: 8%;
-            margin-bottom: 4%;
-            border-radius: 10px;
-            padding-top: 20px;
-            padding-left: 10px;
-            padding-right: 30px;
-            width: 400px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        .signin-form h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        input[type="email"],
-        input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        .checkbox-group {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .checkbox-group input[type="checkbox"] {
-            margin-right: 10px;
-        }
-        button {
-            padding: 12px;
-            margin-left: 150px;
-            background-color: #f3873b;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            margin-bottom: 20px;
-        }
-        button:hover {
-            background-color: #d97732;
-        }
-        a {
-            color: #2ea7e0;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        footer {
-            background-color: black;
-            color: white;
-            padding: 10px;
-            text-align: center;
-        }
-        .about-us h2 {
-            font-family: 'Bree Serif', serif;
-            font-size: 2rem;
-            margin-bottom: 2px;
-        }
-        .about-us p {
-            font-family: 'Bree Serif', serif;
-            font-size: .6rem;
-            line-height: 1.5;
-        }
+        /* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('./images/BGimage.png');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar Styles */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.account-icon {
+    display: flex;
+    align-items: center;
+}
+
+.account-icon img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.account-icon a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 10px;
+}
+
+/* Form Container Styles */
+.form-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.password-container {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-group input {
+    margin-right: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Error Message Styles */
+#invalid {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.about-us {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.about-us h2 {
+    margin-bottom: 10px;
+}
+
+.about-us p {
+    margin: 5px 0;
+}
+
     </style>
 </head>
 <body>

@@ -5,16 +5,15 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #ce2323;
-    background-image: url('./images/desert.png');
+     background-image: url('./images/BGimage.png');
+            background-size: cover; 
+            background-position: center;
+            background-repeat: no-repeat;
 }
 
 /* Common styles for both forms */
 .form-container {
-    background-image: url('./images/homepage6.jpg');
-    background-size :contain;
-    /* background-repeat: no-repeat; */
-    border:5px solid black;
+    background-color: white;
     border-radius: 10px;
     padding-left: 10px;
     padding-right: 30px;
@@ -60,18 +59,19 @@ input[type="checkbox"] {
 
 button {
     padding: 12px;
-    background-color: #e58d09;
+    margin-left: 160px;
+    background-color: #f3873b;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
     margin-bottom: 10px;
+    width: 100px;
 }
 
-
 button:hover {
-    background-color: #cd9214;
+    background-color: #d97732;
 }
 /* 
 button.google-signup, button.google-signin {
@@ -112,7 +112,4 @@ p {
 .signin-form h2 {
     text-align: center;
     margin-bottom: 20px;
-}
-#invalid{
-    color: rgb(255, 0, 0);
 }

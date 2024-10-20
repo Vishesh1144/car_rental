@@ -103,16 +103,23 @@ session_start(); // Start the session at the beginning of the file
             text-align: center;
             padding: 50px;
             background-color: #f8f8f8;
+            background-image: url('./images/BGimage.png');
+            background-size: cover; 
+            background-position: center;
+            background-repeat: no-repeat;
+            box-shadow:red;
         }
 
         .main-content h1 {
             font-size: 2.5rem;
             margin-bottom: 20px;
+            color:white;
         }
 
         .main-content p {
             font-size: 1.2rem;
-            color: #333;
+           
+            color:white;
         }
 
         /* About Us Section */
@@ -143,9 +150,9 @@ session_start(); // Start the session at the beginning of the file
     <div id="navbar">
         
         <ul class="nav-links">
-            <li><a href="#">Home</a></li>
+            <li><a href="">Home</a></li>
             <li><a href="Car_cards.php">Bookings</a></li>
-            <li><a href="#">About Us</a></li>
+            <li><a href="about.html">About Us</a></li>
         </ul>
         <div class="account-icon">
             <img src="./images/account-logo.png" alt="Account" />
@@ -166,6 +173,7 @@ session_start(); // Start the session at the beginning of the file
        <h1> <?php echo "Hello,".($_SESSION['user'])?><h1>
         <h1>Welcome to Our Vehicle Rental Service</h1>
         <p>Find the perfect vehicle for your next trip. Browse our selection of cars, SUVs, and more!</p>
+
     </div>
 
     <!-- About Us Section -->

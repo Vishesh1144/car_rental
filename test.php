@@ -1,7 +1,4 @@
 <?php
-// Start the session at the beginning of the file
-session_start();
-
 // Database connection details
 $servername = 'localhost';
 $username = 'root';
@@ -15,31 +12,6 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-
-// Logic for handling form submission
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST["email"];
-    $password = $_POST["pass"];
-
-    $sql = "SELECT * FROM usereg WHERE email = '$username' AND password = '$password'";
-    $result = $conn->query($sql);
-
-    if (!$result) {
-        die("SQL Error: " . $conn->error);
-    }
-
-    if ($result->num_rows > 0) {
-        $name = $result->fetch_assoc();
-        $fn = $name['firstname'];
-        $_SESSION['user'] = $fn;
-        header("Location: loginhome.php");
-        exit(); // Ensure to exit after the header redirection
-    } else {
-        $error_message = "Invalid username or password.";
-    }
-}
-
-$conn->close();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -162,8 +134,7 @@ $conn->close();
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 16px;
-            margin-bottom: 20px;
+            font-size: 16px;margin-bottom: 20px
         }
         button:hover {
             background-color: #d97732;
@@ -226,9 +197,30 @@ $conn->close();
             <button type="submit">Sign In</button>
             <div id="invalid">
                 <?php
-                if (isset($error_message)) {
-                    echo $error_message; // Display error message if there is one
+                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                    $username = $_POST["email"];
+                    $password = $_POST["pass"];
+
+                    $sql = "SELECT * FROM usereg WHERE email = '$username' AND password = '$password'";
+                    $result = $conn->query($sql);
+
+                    if (!$result) {
+                        die("SQL Error: " . $conn->error);
+                    }
+
+                    if ($result->num_rows > 0) {
+                        session_start(); 
+                        $name = $result->fetch_assoc();
+                        $fn = $name['firstname'];
+                        $_SESSION['user'] = $fn;
+                        header("Location: loginhome.php");
+                        exit();
+                    } else {
+                        echo "Invalid username or password.";
+                    }
                 }
+
+                $conn->close();
                 ?>
             </div>
         </form>

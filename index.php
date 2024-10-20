@@ -4,18 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rent a Vehicle Today!</title>
-    
+    <link rel="icon" type="image/png" href="./images/favicon.png"> <!-- Add the favicon link here -->
     <!-- Inline CSS -->
     <style>
         * {
             margin: 0;
             padding: 0;
         }
+        body{
+            background-image: url('./images/BGimage.png');
+            background-size: contain; 
+            background-position: center;
+            background-repeat: no-repeat; 
+      
+        }
 
         html, body {
             height: 100%;
             display: flex;
             flex-direction: column;
+          
         }
 
         /* CSS Variables */
@@ -96,19 +104,35 @@
         /* Main Content Styling */
         .main-content {
             flex: 1; /* This makes the main content take the remaining space */
-            text-align: center;
-            padding: 50px;
-            background-color: #f8f8f8;
+            text-align: justify;
+            color:white;
+            padding: 55px;
+            background-image: url('./images/BGimage.png');
+            background-size: cover; 
+            background-position: center;
+            background-repeat: no-repeat;
         }
-
+        
         .main-content h1 {
+            width:100vh;
+    
+            text-align: center;
+            box-shadow: 10px 4px 8px rgba(0, 0, 0, 0.6); /* Button shadow */
+            text-shadow: 10px 4px 8px rgba(0, 0, 0, 0.2); /* Button shadow */
             font-size: 2.5rem;
+            font-family: Arial, Helvetica, sans-serif;
             margin-bottom: 20px;
+            padding:10px;
+            float: right;
+            /* border: 2px solid rgb(196, 18, 18); */
+            /* background-color: rgba(8, 218, 255, 0.763); */
         }
 
         .main-content p {
+            color:white;
             font-size: 1.2rem;
-            color: #333;
+            text-align: center;
+            float: right;
         }
 
         /* About Us Section */
@@ -123,7 +147,6 @@
             font-family: 'Bree Serif', serif;
             font-size: 2rem;
             margin-bottom: 2px;
-
         }
 
         .about-us p {
@@ -132,6 +155,7 @@
             line-height: 1.5;
         }
     </style>
+
 </head>
 <body>
 
@@ -141,7 +165,8 @@
         <ul class="nav-links">
             <li><a href="#">Home</a></li>
             <li><a href="session-check.php">Book now</a></li>
-            <li><a href="#">About Us</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="Adminlogin.html">Admin</a></li>
         </ul>
         <div class="account-icon">
             <img src="./images/account-logo.png" alt="Account" />

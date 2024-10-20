@@ -38,6 +38,10 @@ $conn->close();
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            background-image: url('./images/card.jpg');
+            background-size: cover; 
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
         .container {
