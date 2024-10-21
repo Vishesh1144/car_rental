@@ -233,7 +233,7 @@ footer {
             <div id="invalid">
                 <?php
                 if (isset($error_message)) {
-                    echo $error_message; // Display error message if there is one
+                    echo $error_message;
                 }
                 ?>
             </div>

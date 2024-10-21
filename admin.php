@@ -84,7 +84,7 @@
 
     <div class="sidebar">
         <h2>Admin Panel</h2>
-        <a href="index.php">Home</a> <!-- Full redirect to index.php -->
+        <a href="index.php">Home</a>
         <a href="d.php?page=booked">Booked</a>
         <a href="table.php?page=users">Users</a>
         <a href="logout.php" class="logout">Logout</a>
@@ -98,13 +98,13 @@
         // Include content based on the selected page
         switch ($page) {
             case 'users':
-                include 'table.php'; // Users page
+                include 'table.php'; 
                 break;
             case 'booked':
-                include 'd.php'; // Booked cars page
+                include 'd.php';
                 break;
             default:
-                include 'd.php'; // Load booked data as default
+                include 'd.php';
                 break;
         }
         ?>

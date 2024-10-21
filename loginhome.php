@@ -1,5 +1,5 @@
 <?php
-session_start(); // Start the session at the beginning of the file
+session_start(); 
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +9,6 @@ session_start(); // Start the session at the beginning of the file
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rent a Vehicle Today!</title>
     
-    <!-- Inline CSS -->
     <style>
         * {
             margin: 0;
@@ -22,12 +21,10 @@ session_start(); // Start the session at the beginning of the file
             flex-direction: column;
         }
 
-        /* CSS Variables */
         :root {
             --navbar-height: 59px;
         }
 
-        /* Navigation Bar */
         #navbar {
             display: flex;
             align-items: center;
@@ -38,18 +35,16 @@ session_start(); // Start the session at the beginning of the file
             z-index: 1;
         }
 
-        /* Navigation Bar: Logo and Image */
         #logo {
             margin: 10px 34px;
         }
 
         #logo img {
-            height: 40px; /* Set the height to a smaller size */
-            width: auto; /* Maintain aspect ratio */
-            margin: 0; /* Remove margin */
+            height: 40px; 
+            width: auto;
+            margin: 0; 
         }
 
-        /* Navigation Bar: List Styling */
         .nav-links {
             display: flex;
             font-family: 'Baloo Bhai', cursive;
@@ -74,7 +69,6 @@ session_start(); // Start the session at the beginning of the file
             background-color: white;
         }
 
-        /* Account Icon */
         .account-icon {
             margin-left: auto;
             display: flex;
@@ -97,9 +91,8 @@ session_start(); // Start the session at the beginning of the file
             text-decoration: underline;
         }
 
-        /* Main Content Styling */
         .main-content {
-            flex: 1; /* This makes the main content take the remaining space */
+            flex: 1;
             text-align: center;
             padding: 50px;
             background-color: #f8f8f8;
@@ -122,7 +115,6 @@ session_start(); // Start the session at the beginning of the file
             color:white;
         }
 
-        /* About Us Section */
         footer {
             background-color: black;
             color: white;
@@ -146,7 +138,7 @@ session_start(); // Start the session at the beginning of the file
 </head>
 <body>
 
-    <!-- Navigation Bar (fixed at the top) -->
+
     <div id="navbar">
         
         <ul class="nav-links">
@@ -160,7 +152,7 @@ session_start(); // Start the session at the beginning of the file
                 <?php
                 // Display the user's name if they are logged in
                 if (isset($_SESSION['user'])) {
-                    echo htmlspecialchars($_SESSION['user']); // Use htmlspecialchars to prevent XSS
+                    echo htmlspecialchars($_SESSION['user']); 
                 } 
                 ?>
             </a>

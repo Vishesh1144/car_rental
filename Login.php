@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $fn = $name['firstname'];
         $_SESSION['user'] = $fn;
         header("Location: loginhome.php");
-        exit(); // Ensure to exit after the header redirection
+        exit(); 
     } else {
         $error_message = "Invalid username or password.";
     }
@@ -227,7 +227,7 @@ $conn->close();
             <div id="invalid">
                 <?php
                 if (isset($error_message)) {
-                    echo $error_message; // Display error message if there is one
+                    echo $error_message; 
                 }
                 ?>
             </div>

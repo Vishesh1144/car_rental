@@ -11,10 +11,11 @@ body {
 
 /* Common styles for both forms */
 .form-container {
-    background-image: url('./images/homepage6.jpg');
+    /* background-image: url('./images/homepage6.jpg'); */
     background-size :contain;
     /* background-repeat: no-repeat; */
     border:5px solid black;
+    background-color: white;
     border-radius: 10px;
     padding-left: 10px;
     padding-right: 30px;
